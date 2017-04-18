@@ -2,6 +2,15 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="C:\Users\Parker\Documents\GitHub\TetrisXD\core\build\libs\core-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="026f28186042fd8493577ad6e41aa73c6fbec8c3">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\core-1.0_c23bc867c4a162df399c4bac67e90f1c35aa6344.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-box2d\1.9.5\c8098219abfe00b849cc43d461b1105fea3a2944\gdx-box2d-1.9.5.jar"
         jumboMode="true"
@@ -9,6 +18,15 @@
         revision="25.0.2"
         sha1="c8098219abfe00b849cc43d461b1105fea3a2944">
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-box2d-1.9.5_42a54eb97c01aea7dec2d8cf75d3cf73f94df00e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-box2d\1.9.5\c8098219abfe00b849cc43d461b1105fea3a2944\gdx-box2d-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c8098219abfe00b849cc43d461b1105fea3a2944">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\gdx-box2d-1.9.5_42a54eb97c01aea7dec2d8cf75d3cf73f94df00e.jar" />
     </item>
     <item
         is-multidex="true"
@@ -20,6 +38,15 @@
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\vis-runtime-0.3.2_1d73589d0dcbf7185950a2391fdd10c7946b482b\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.dermetfan.libgdx-utils\libgdx-utils\0.13.3\96b4f9d59b869f1cbf83b055ec763519da83a125\libgdx-utils-0.13.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="96b4f9d59b869f1cbf83b055ec763519da83a125">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\libgdx-utils-0.13.3_164528a2e8e234ce0f213a9f22be04a12d17a02f.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.dermetfan.libgdx-utils\libgdx-utils\0.13.3\96b4f9d59b869f1cbf83b055ec763519da83a125\libgdx-utils-0.13.3.jar"
         jumboMode="true"
@@ -27,6 +54,105 @@
         revision="25.0.2"
         sha1="96b4f9d59b869f1cbf83b055ec763519da83a125">
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\libgdx-utils-0.13.3_164528a2e8e234ce0f213a9f22be04a12d17a02f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.kotcrab.vis\vis-runtime\0.3.2\6d94c3fddf7aa09b83fe5c12c9847d3cd3aba445\vis-runtime-0.3.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d94c3fddf7aa09b83fe5c12c9847d3cd3aba445">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\vis-runtime-0.3.2_1d73589d0dcbf7185950a2391fdd10c7946b482b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.5\293bbe05bfb5ca812c849e4d1f494f56509d5a6e\gdx-backend-android-1.9.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="293bbe05bfb5ca812c849e4d1f494f56509d5a6e">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-backend-android-1.9.5_40b58912af622e1e7499e106aa1878b12499f168\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.onedaybeard.artemis\artemis-odb\1.3.1\628245bd40b4d946a60b793db072cc46966cef6\artemis-odb-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0628245bd40b4d946a60b793db072cc46966cef6">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\artemis-odb-1.3.1_9e747105348886c4d927ce5d33cc8826bdfe091b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.5\293bbe05bfb5ca812c849e4d1f494f56509d5a6e\gdx-backend-android-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="293bbe05bfb5ca812c849e4d1f494f56509d5a6e">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.5_40b58912af622e1e7499e106aa1878b12499f168.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.onedaybeard.artemis\artemis-odb\1.3.1\628245bd40b4d946a60b793db072cc46966cef6\artemis-odb-1.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0628245bd40b4d946a60b793db072cc46966cef6">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\artemis-odb-1.3.1_9e747105348886c4d927ce5d33cc8826bdfe091b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dce987b29d4b93699f47d698215c0938648d9c77">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_eddfaedb9b33fdc0a7659f3fc2c0f58afbcc137c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-ai\1.8.0\ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5\gdx-ai-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\gdx-ai-1.8.0_a091ee23061d0b123ca61862095bb6a39ec9fdb6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-ai\1.8.0\ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5\gdx-ai-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-ai-1.8.0_a091ee23061d0b123ca61862095bb6a39ec9fdb6\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-freetype\1.9.5\71eba1332b3c2436d3b8e24296a0feb1c01d9e67\gdx-freetype-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71eba1332b3c2436d3b8e24296a0feb1c01d9e67">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\gdx-freetype-1.9.5_8fdf3c64ad7946d5c10c98de483f93ee5b425921.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.box2dlights\box2dlights\1.4\3d77ad5b4164fb32fc67e2446e35911bb0aaf0bd\box2dlights-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d77ad5b4164fb32fc67e2446e35911bb0aaf0bd">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\box2dlights-1.4_06e3523c21b2141dbf17bfce7dacfa290385f255.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.5\dc65bb2f51828c58b1b2b3ac585357204d54ee5f\gdx-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dc65bb2f51828c58b1b2b3ac585357204d54ee5f">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\gdx-1.9.5_46740cbf73b455e29b1e342ab6526915d8e848dc.jar" />
     </item>
     <item
         is-multidex="true"
@@ -65,6 +191,15 @@
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-1.9.5_46740cbf73b455e29b1e342ab6526915d8e848dc\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.dermetfan.libgdx-utils\libgdx-utils-box2d\0.13.3\8cf92d93d3022a9616636a67b0864b781d349066\libgdx-utils-box2d-0.13.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8cf92d93d3022a9616636a67b0864b781d349066">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\libgdx-utils-box2d-0.13.3_530fc4da941e775d0abced6c3fe5df8760a3f2dc.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-freetype\1.9.5\71eba1332b3c2436d3b8e24296a0feb1c01d9e67\gdx-freetype-1.9.5.jar"
         jumboMode="true"
@@ -74,6 +209,15 @@
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-freetype-1.9.5_8fdf3c64ad7946d5c10c98de483f93ee5b425921\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.kotcrab.vis\vis-ui\1.2.4\59a653b254fa9e6dd61171ad15596254f53bc3d1\vis-ui-1.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="59a653b254fa9e6dd61171ad15596254f53bc3d1">
+        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\pre-dexed\debug\vis-ui-1.2.4_a2ded78ff005b053ef97d1bce33826a4737dd007.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
@@ -81,42 +225,6 @@
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_698d7ad71c4f98c6ee5c2457ca63568818617ac4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.5\293bbe05bfb5ca812c849e4d1f494f56509d5a6e\gdx-backend-android-1.9.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="293bbe05bfb5ca812c849e4d1f494f56509d5a6e">
-        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-backend-android-1.9.5_40b58912af622e1e7499e106aa1878b12499f168\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\net.onedaybeard.artemis\artemis-odb\1.3.1\628245bd40b4d946a60b793db072cc46966cef6\artemis-odb-1.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0628245bd40b4d946a60b793db072cc46966cef6">
-        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\artemis-odb-1.3.1_9e747105348886c4d927ce5d33cc8826bdfe091b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="dce987b29d4b93699f47d698215c0938648d9c77">
-        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_eddfaedb9b33fdc0a7659f3fc2c0f58afbcc137c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Parker\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-ai\1.8.0\ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5\gdx-ai-1.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ec30677d8ab1a8b8aa4b853c5f4e4b1361f50bf5">
-        <dex dex="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\transforms\dex\debug\folders\1000\10\gdx-ai-1.8.0_a091ee23061d0b123ca61862095bb6a39ec9fdb6\classes.dex" />
     </item>
 
 </items>

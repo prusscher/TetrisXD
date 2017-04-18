@@ -6,19 +6,19 @@
     density="xxxhdpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1492224017844"
+    timestamp="1492487963779"
     token="-4359655410862284589"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="232" />
+        duration="152" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="48" />
+        duration="32" />
     <task
         name="verifier"
         duration="5" />
@@ -27,13 +27,22 @@
         location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
+        location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
         location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\outputs\apk\android-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1492222907488"
+        timestamp="1492484971219"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\outputs\apk\android-debug.apk"
             type="SPLIT_MAIN" />
@@ -56,13 +65,7 @@
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -73,18 +76,13 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1492223982405"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\outputs\apk\android-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1492224017844"
+        timestamp="1492487963779"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Parker\Documents\GitHub\TetrisXD\android\build\outputs\apk\android-debug.apk"

@@ -9,8 +9,8 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
 		// Set to vertical orientation
-		config.height = 800;
-		config.width = 280;
+		config.height = 640;
+		config.width = 360;
 
 		new LwjglApplication(new TetrisXD(), config);
 	}

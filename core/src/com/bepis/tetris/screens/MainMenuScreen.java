@@ -8,12 +8,21 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.input.GestureDetector;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Event;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
+
+import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
+
+import com.bepis.tetris.Assets;
 import com.bepis.tetris.TetrisXD;
 import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisImageButton;
@@ -27,66 +36,58 @@ public class MainMenuScreen implements Screen {
     private TetrisXD game;
 
     private Stage stage;
+    private Assets assets;
 
-    private Image img;
+    private float timer = 1;
+
+    private Image piece;
 
     ShapeRenderer shape;
 
     public MainMenuScreen(TetrisXD game) {
         this.game = game;
 
-        stage = new Stage(new FitViewport(240, 400, new OrthographicCamera()));
+        // Create the stage and set the input processor
+        stage = new Stage(new FitViewport(360, 640, new OrthographicCamera()));
         Gdx.input.setInputProcessor(stage);
 
+        // Create the assets object
+        assets = new Assets();
+
+        // Create the shape renderer. Just here because its nice
         shape = new ShapeRenderer();
 
+        // Load VisUI so I can use the nice buttons
         VisUI.load();
 
-        img = new Image();
-        img.setDrawable(new TextureRegionDrawable(new TextureRegion(new Texture("badlogic.jpg"))));
-        img.setBounds(10, 100, 220, 220);
+        /*
+        Were going to do stuff now
+        */
 
-        // Create the buttons
-        VisTextButton moveLeftButton = new VisTextButton("<");
-        VisTextButton moveRightButton = new VisTextButton(">");
+        Image testImage = new Image(assets.testImage);
+        testImage.setBounds(0, 0, 360, 640);
 
-        // Set Left and Right button bounds
-        moveLeftButton.setBounds(                   4,  4,  50, 50);
-        moveRightButton.setBounds(stage.getWidth()-54,  4,  50, 50);
+//      stage.addActor(testImage);
 
-        moveLeftButton.addListener(new ChangeListener() {
+        piece = new Image(assets.oTile);
+        piece.setBounds(0, stage.getHeight()-48, assets.oTile.getRegionWidth(), assets.oTile.getRegionHeight());
+
+        stage.addListener(new ActorGestureListener() {
             @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                img.moveBy(-1, 0);
+            public void pan(InputEvent event, float x, float y, float deltaX, float deltaY) {
+                super.pan(event, x, y, deltaX, deltaY);
+                int trunX = (int)(x/(stage.getWidth()/14));
+
+                System.out.println(trunX + " " + x + " " + 24*trunX);
+
+                if(24 * trunX >= 0 && 24 * trunX <= stage.getWidth()-piece.getWidth())
+                    piece.setX(24 * trunX);
             }
         });
 
-        moveRightButton.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                img.moveBy(1, 0);
-            }
-        });
 
-        VisTextButton bottomButton = new VisTextButton("Move that image up");
-        bottomButton.setBounds(4, 4, 232, 25);
-        bottomButton.setColor(Color.RED);
-        bottomButton.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                Gdx.app.log("BUTTON", "Bottom Button Pressed " + img.getY() + " " + img.getHeight() + " " + stage.getHeight());
-                Gdx.input.vibrate(50);
-                img.setY(img.getY() + 4);
-
-                if( img.getY() + img.getHeight() > stage.getHeight() )
-                    img.setY(0);
-            }
-        });
-
-        stage.addActor(img);
-//        stage.addActor(bottomButton);
-        stage.addActor(moveLeftButton);
-        stage.addActor(moveRightButton);
+        stage.addActor(piece);
+        stage.setDebugAll(true);
     }
 
     @Override
@@ -96,26 +97,18 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0, 0, 0, 1);
+        Gdx.gl.glClearColor(.1f, .1f, .1f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stage.act();
         stage.draw();
 
-        // Draw a grid
-        shape.begin(ShapeRenderer.ShapeType.Line);
+        timer -= delta;
 
-        int gridSize = (int)Gdx.graphics.getWidth()/10 - 4;
-
-        shape.setColor(Color.RED);
-
-        for(int y = 0; y < 18; y++) {
-            for(int x = 0; x < 10; x++) {
-                shape.rect( (x * gridSize) + 2, (y * (gridSize+1)) + 1, gridSize, gridSize);
-            }
+        if(timer < 0 && piece.getY() >= 0) {
+            piece.moveBy(0, -24);
+            timer = 1;
         }
-
-        shape.end();
     }
 
     @Override
@@ -142,5 +135,22 @@ public class MainMenuScreen implements Screen {
     public void dispose() {
         VisUI.dispose();
         stage.dispose();
+    }
+
+
+    public void drawGrid() {
+        shape.begin(ShapeRenderer.ShapeType.Line);
+
+        int gridSize = (int)Gdx.graphics.getWidth()/10 - 4;
+
+        shape.setColor(Color.RED);
+
+        for(int y = 0; y < 18; y++) {
+            for(int x = 0; x < 10; x++) {
+                shape.rect( (x * gridSize) + 2, (y * (gridSize+1)) + 1, gridSize, gridSize);
+            }
+        }
+
+        shape.end();
     }
 }
