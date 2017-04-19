@@ -40,7 +40,7 @@ ADDED from C:\Users\Parker\Documents\GitHub\TetrisXD\android\AndroidManifest.xml
 	android:allowBackup
 		ADDED from C:\Users\Parker\Documents\GitHub\TetrisXD\android\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from C:\Users\Parker\Documents\GitHub\TetrisXD\android\AndroidManifest.xml:13:9-45
+		ADDED from C:\Users\Parker\Documents\GitHub\TetrisXD\android\AndroidManifest.xml:13:9-43
 	android:theme
 		ADDED from C:\Users\Parker\Documents\GitHub\TetrisXD\android\AndroidManifest.xml:15:9-40
 activity#com.bepis.tetris.AndroidLauncher

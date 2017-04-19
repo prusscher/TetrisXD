@@ -5,28 +5,22 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.input.GestureDetector;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.Event;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 
 import com.bepis.tetris.Assets;
+import com.bepis.tetris.GameMode;
 import com.bepis.tetris.TetrisXD;
+import com.bepis.tetris.actors.BackgroundActor;
+import com.bepis.tetris.actors.BoardActor;
+import com.bepis.tetris.actors.NextPieceTileActor;
+import com.bepis.tetris.actors.StatsActor;
+import com.bepis.tetris.actors.TitleActor;
 import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.VisImageButton;
-import com.kotcrab.vis.ui.widget.VisTextButton;
 
 /**
  * Created by Parker on 4/14/2017.
@@ -64,30 +58,38 @@ public class MainMenuScreen implements Screen {
         Were going to do stuff now
         */
 
-        Image testImage = new Image(assets.testImage);
-        testImage.setBounds(0, 0, 360, 640);
 
-//      stage.addActor(testImage);
+//        Image testImage = new Image(assets.testImage);
+//        testImage.setBounds(0, 0, 360, 640);
+//        stage.addActor(testImage);
 
-        piece = new Image(assets.oTile);
-        piece.setBounds(0, stage.getHeight()-48, assets.oTile.getRegionWidth(), assets.oTile.getRegionHeight());
+        // Add the game actors
+        /* actor order
+            background              0
+            title                   1
+            stats, nextpiece, board 2
+            piece                   3
+        */
+        boolean drawBoard = true;
+        if(drawBoard) {
+            // 0
+            stage.addActor(new BackgroundActor(assets, GameMode.FORTYLINES));
 
-        stage.addListener(new ActorGestureListener() {
-            @Override
-            public void pan(InputEvent event, float x, float y, float deltaX, float deltaY) {
-                super.pan(event, x, y, deltaX, deltaY);
-                int trunX = (int)(x/(stage.getWidth()/14));
+            // 1
+            stage.addActor(new TitleActor(assets, GameMode.FORTYLINES));
 
-                System.out.println(trunX + " " + x + " " + 24*trunX);
+            // 2
+            stage.addActor(new NextPieceTileActor(assets));
+            stage.addActor(new StatsActor(assets, GameMode.FORTYLINES));
+            stage.addActor(new BoardActor(assets, GameMode.FORTYLINES));
 
-                if(24 * trunX >= 0 && 24 * trunX <= stage.getWidth()-piece.getWidth())
-                    piece.setX(24 * trunX);
-            }
-        });
+            // 3
+            //stage.addActore(new PieceActor());
+        }
 
+        // Done adding actors
 
-        stage.addActor(piece);
-        stage.setDebugAll(true);
+        stage.setDebugAll(false);
     }
 
     @Override
@@ -102,13 +104,6 @@ public class MainMenuScreen implements Screen {
 
         stage.act();
         stage.draw();
-
-        timer -= delta;
-
-        if(timer < 0 && piece.getY() >= 0) {
-            piece.moveBy(0, -24);
-            timer = 1;
-        }
     }
 
     @Override

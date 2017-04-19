@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\Parker\\Documents\\GitHub\\TetrisXD\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\Parker\\Documents\\GitHub\\TetrisXD\\android\\res\\drawable-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Parker\\Documents\\GitHub\\TetrisXD\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi\\logo.png",
+        "source": "C:\\Users\\Parker\\Documents\\GitHub\\TetrisXD\\android\\res\\drawable-xxxhdpi\\logo.png"
     }
 ]
