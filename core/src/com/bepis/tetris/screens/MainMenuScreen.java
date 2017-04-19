@@ -6,8 +6,10 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
@@ -17,17 +19,20 @@ import com.bepis.tetris.GameMode;
 import com.bepis.tetris.TetrisXD;
 import com.bepis.tetris.actors.BackgroundActor;
 import com.bepis.tetris.actors.BoardActor;
+import com.bepis.tetris.actors.MainMenuActor;
 import com.bepis.tetris.actors.NextPieceTileActor;
 import com.bepis.tetris.actors.StatsActor;
 import com.bepis.tetris.actors.TitleActor;
 import com.kotcrab.vis.ui.VisUI;
+import com.kotcrab.vis.ui.widget.VisTable;
+import com.kotcrab.vis.ui.widget.VisTextButton;
 
 /**
  * Created by Parker on 4/14/2017.
  */
 
 public class MainMenuScreen implements Screen {
-    private TetrisXD game;
+    private static TetrisXD game;
 
     private Stage stage;
     private Assets assets;
@@ -38,7 +43,7 @@ public class MainMenuScreen implements Screen {
 
     ShapeRenderer shape;
 
-    public MainMenuScreen(TetrisXD game) {
+    public MainMenuScreen(final TetrisXD game) {
         this.game = game;
 
         // Create the stage and set the input processor
@@ -46,7 +51,7 @@ public class MainMenuScreen implements Screen {
         Gdx.input.setInputProcessor(stage);
 
         // Create the assets object
-        assets = new Assets();
+        assets = game.assets;
 
         // Create the shape renderer. Just here because its nice
         shape = new ShapeRenderer();
@@ -58,34 +63,21 @@ public class MainMenuScreen implements Screen {
         Were going to do stuff now
         */
 
+        stage.addActor(new MainMenuActor(assets));
 
-//        Image testImage = new Image(assets.testImage);
-//        testImage.setBounds(0, 0, 360, 640);
-//        stage.addActor(testImage);
+        // WIP Start Button
+        VisTextButton start = new VisTextButton("Start");
+        start.setBounds(80, 256, 100, 40);
+        start.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                game.setScreen(new GameScreen(game, GameMode.FORTYLINES));
+            }
+        });
 
-        // Add the game actors
-        /* actor order
-            background              0
-            title                   1
-            stats, nextpiece, board 2
-            piece                   3
-        */
-        boolean drawBoard = true;
-        if(drawBoard) {
-            // 0
-            stage.addActor(new BackgroundActor(assets, GameMode.FORTYLINES));
+        stage.addActor(start);
 
-            // 1
-            stage.addActor(new TitleActor(assets, GameMode.FORTYLINES));
 
-            // 2
-            stage.addActor(new NextPieceTileActor(assets));
-            stage.addActor(new StatsActor(assets, GameMode.FORTYLINES));
-            stage.addActor(new BoardActor(assets, GameMode.FORTYLINES));
-
-            // 3
-            //stage.addActore(new PieceActor());
-        }
 
         // Done adding actors
 
@@ -130,22 +122,5 @@ public class MainMenuScreen implements Screen {
     public void dispose() {
         VisUI.dispose();
         stage.dispose();
-    }
-
-
-    public void drawGrid() {
-        shape.begin(ShapeRenderer.ShapeType.Line);
-
-        int gridSize = (int)Gdx.graphics.getWidth()/10 - 4;
-
-        shape.setColor(Color.RED);
-
-        for(int y = 0; y < 18; y++) {
-            for(int x = 0; x < 10; x++) {
-                shape.rect( (x * gridSize) + 2, (y * (gridSize+1)) + 1, gridSize, gridSize);
-            }
-        }
-
-        shape.end();
     }
 }

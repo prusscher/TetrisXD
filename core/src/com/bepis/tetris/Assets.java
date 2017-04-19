@@ -33,6 +33,11 @@ public class Assets {
     public TextureRegion borderTile;
     public TextureRegion[] boardBackgrounds;
 
+    // MAINMENUACTOR OBJECT ASSETS
+    public TextureRegion overlay;
+    public TextureRegion mainMenuTitle;
+    public TextureRegion mainMenuTab;
+
     // Dev stuff/test stuff
     public Texture testImage;
 
@@ -89,6 +94,12 @@ public class Assets {
         boardBackgrounds = new TextureRegion[7];
         for(int j = 0; j < 7; j++)
             boardBackgrounds[j] = new TextureRegion(temp, j, 1, 1, 1);
+
+        // MainMenuActor stuff
+        overlay = new TextureRegion(new Texture(Gdx.files.internal("mainMenuTopBG.png")));
+        mainMenuTitle = new TextureRegion(new Texture(Gdx.files.internal("title.png")));
+        mainMenuTab = new TextureRegion(new Texture(Gdx.files.internal("buttonTab.png")));
+
     }
 
 }

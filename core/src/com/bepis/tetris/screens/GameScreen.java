@@ -7,7 +7,13 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.bepis.tetris.Assets;
+import com.bepis.tetris.GameMode;
 import com.bepis.tetris.TetrisXD;
+import com.bepis.tetris.actors.BackgroundActor;
+import com.bepis.tetris.actors.BoardActor;
+import com.bepis.tetris.actors.NextPieceTileActor;
+import com.bepis.tetris.actors.StatsActor;
+import com.bepis.tetris.actors.TitleActor;
 
 /**
  * Created by UPS on 4/17/2017.
@@ -25,6 +31,9 @@ public class GameScreen implements Screen {
 
     private Stage stage;
 
+    private Assets assets;
+
+    private int mode;
 
     private float dropTimer = 1;
 
@@ -38,8 +47,11 @@ public class GameScreen implements Screen {
 
     private GameState state;
 
-    public GameScreen(TetrisXD game) {
+    public GameScreen(TetrisXD game, int mode) {
         this.game = game;
+        this.mode = mode;
+
+        assets = game.assets;
 
         stage = new Stage(new FitViewport(360, 640, new OrthographicCamera()));
         Gdx.input.setInputProcessor(stage);
@@ -48,6 +60,34 @@ public class GameScreen implements Screen {
         grid = new boolean[GRID_WIDTH][GRID_HEIGHT];
 
         state = new PieceState();
+
+        //        Image testImage = new Image(assets.testImage);
+//        testImage.setBounds(0, 0, 360, 640);
+//        stage.addActor(testImage);
+
+        // Add the game actors
+        /* actor order
+            background              0
+            title                   1
+            stats, nextpiece, board 2
+            piece                   3
+        */
+        boolean drawBoard = true;
+        if(drawBoard) {
+            // 0
+            stage.addActor(new BackgroundActor(assets, GameMode.FORTYLINES));
+
+            // 1
+            stage.addActor(new TitleActor(assets, GameMode.FORTYLINES));
+
+            // 2
+            stage.addActor(new NextPieceTileActor(assets));
+            stage.addActor(new StatsActor(assets, GameMode.FORTYLINES));
+            stage.addActor(new BoardActor(assets, GameMode.FORTYLINES));
+
+            // 3
+            //stage.addActore(new PieceActor());
+        }
     }
 
     class PieceState implements GameState {

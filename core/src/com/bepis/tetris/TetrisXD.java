@@ -10,8 +10,11 @@ import com.bepis.tetris.screens.MainMenuScreen;
 
 public class TetrisXD extends Game {
 
+	public Assets assets;
+
 	@Override
 	public void create () {
+		assets = new Assets();
 		this.setScreen(new MainMenuScreen(this));
 	}
 
