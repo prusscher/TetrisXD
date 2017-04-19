@@ -37,6 +37,7 @@ public class Assets {
     public TextureRegion overlay;
     public TextureRegion mainMenuTitle;
     public TextureRegion mainMenuTab;
+    public TextureRegion fadeScreen;
 
     // Dev stuff/test stuff
     public Texture testImage;
@@ -99,6 +100,7 @@ public class Assets {
         overlay = new TextureRegion(new Texture(Gdx.files.internal("mainMenuTopBG.png")));
         mainMenuTitle = new TextureRegion(new Texture(Gdx.files.internal("title.png")));
         mainMenuTab = new TextureRegion(new Texture(Gdx.files.internal("buttonTab.png")));
+        fadeScreen = new TextureRegion(new Texture(Gdx.files.internal("fadeScreen.png")));
 
     }
 

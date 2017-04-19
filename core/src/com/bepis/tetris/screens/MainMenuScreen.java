@@ -50,9 +50,9 @@ public class MainMenuScreen implements Screen {
 
         // Create the stage and set the input processor
         stage = new Stage(new FitViewport(360, 640, new OrthographicCamera()));
-        Gdx.input.setInputProcessor(stage);
+        //Gdx.input.setInputProcessor(stage);
 
-        // Create the assets object
+        // Set the assets object to the game's asset object
         assets = game.assets;
 
         // Create the shape renderer. Just here because its nice
@@ -61,10 +61,7 @@ public class MainMenuScreen implements Screen {
         // Load VisUI so I can use the nice buttons
         VisUI.load();
 
-        /*
-        Were going to do stuff now
-        */
-
+        // Add the Main Menu background, title, and visual tab for buttons
         stage.addActor(new MainMenuActor(assets));
 
         // WIP Start Button
@@ -76,10 +73,12 @@ public class MainMenuScreen implements Screen {
                 stage.addAction(fadeToGameAction(GameMode.FORTYLINES));
             }
         });
-
         stage.addActor(start);
 
         // Done adding actors
+
+        // Fade in the Menu on start
+        stage.addAction(fadeToMenu());
 
         stage.setDebugAll(false);
     }
@@ -132,16 +131,30 @@ public class MainMenuScreen implements Screen {
      */
     public SequenceAction fadeToGameAction(final int mode) {
         return sequence(
-                parallel(moveBy(0,0,.2f), alpha(.75f)),
-                parallel(moveBy(0,0,.2f), alpha(.50f)),
-                parallel(moveBy(0,0,.2f), alpha(.25f)),
-                parallel(moveBy(0,0,.2f), alpha(0)),
+                alpha(0f, .8f),
                 run(new Runnable() {
                     @Override
                     public void run() {
                         game.setScreen(new GameScreen(game, mode));
                     }
                 })
+        );
+    }
+
+    /**
+     * Fades in when the application starts. Nicer than a hard cut to the first screen
+     * @return Action to step alpha up from 0 to 1 over .8 seconds
+     */
+    public SequenceAction fadeToMenu() {
+        return sequence(
+                alpha(0),
+                alpha(1f, .8f),
+                parallel(alpha(1f), run(new Runnable() {
+                    @Override
+                    public void run() {
+                        Gdx.input.setInputProcessor(stage);
+                    }
+                }))
         );
     }
 }
