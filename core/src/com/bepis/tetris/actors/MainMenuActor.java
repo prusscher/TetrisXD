@@ -50,12 +50,12 @@ public class MainMenuActor extends Actor {
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
 
-        batch.setColor(Color.WHITE);
+        batch.setColor(1, 1, 1, parentAlpha);
 
         // draw animated background
         for(int y = 0; y < 27; y++)
             for(int x = 0; x < 15; x++)
-                batch.draw(back.getKeyFrame(statetime), getX()+24*x, getY()+24*y);
+                batch.draw(back.getKeyFrame(statetime), getX() + 24 * x, getY() + 24 * y);
 
         // draw overlay BG
         batch.draw(overlay, 0, 0);

@@ -1,5 +1,6 @@
 package com.bepis.tetris.screens;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
@@ -8,6 +9,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
@@ -67,17 +69,15 @@ public class MainMenuScreen implements Screen {
 
         // WIP Start Button
         VisTextButton start = new VisTextButton("Start");
-        start.setBounds(80, 256, 100, 40);
+        start.setBounds(64, 256, 224, 40);
         start.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                game.setScreen(new GameScreen(game, GameMode.FORTYLINES));
+                stage.addAction(fadeToGameAction(GameMode.FORTYLINES));
             }
         });
 
         stage.addActor(start);
-
-
 
         // Done adding actors
 
@@ -91,7 +91,7 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(.1f, .1f, .1f, 1);
+        Gdx.gl.glClearColor(1f, 1f, 1f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stage.act();
@@ -122,5 +122,26 @@ public class MainMenuScreen implements Screen {
     public void dispose() {
         VisUI.dispose();
         stage.dispose();
+    }
+
+
+    /**
+     * Fades the current stage to 0 over .8 seconds
+     * @param mode GameMode to start the game with (0,1,2)
+     * @return Action to give to the stage to fade
+     */
+    public SequenceAction fadeToGameAction(final int mode) {
+        return sequence(
+                parallel(moveBy(0,0,.2f), alpha(.75f)),
+                parallel(moveBy(0,0,.2f), alpha(.50f)),
+                parallel(moveBy(0,0,.2f), alpha(.25f)),
+                parallel(moveBy(0,0,.2f), alpha(0)),
+                run(new Runnable() {
+                    @Override
+                    public void run() {
+                        game.setScreen(new GameScreen(game, mode));
+                    }
+                })
+        );
     }
 }
