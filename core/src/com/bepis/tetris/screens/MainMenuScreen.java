@@ -6,12 +6,16 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
@@ -58,27 +62,48 @@ public class MainMenuScreen implements Screen {
         // Create the shape renderer. Just here because its nice
         shape = new ShapeRenderer();
 
-        // Load VisUI so I can use the nice buttons
-        VisUI.load();
-
         // Add the Main Menu background, title, and visual tab for buttons
-        stage.addActor(new MainMenuActor(assets));
+        MainMenuActor mmActor = new MainMenuActor(assets);
+        stage.addActor(mmActor);
 
-        // WIP Start Button
-        VisTextButton start = new VisTextButton("Start");
-        start.setBounds(64, 256, 224, 40);
-        start.addListener(new ChangeListener() {
+        // Marathon Button
+        TextButton marathonButton = new TextButton("MARATHON", assets.skin);
+        marathonButton.setBounds(64, 256, 224, 40);
+        marathonButton.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                stage.addAction(fadeToGameAction(GameMode.MARATHON));
+            }
+        });
+
+        // Ultra Button
+        TextButton ultraButton = new TextButton("ULTRA", assets.skin);
+        ultraButton.setBounds(64, 200, 224, 40);
+        ultraButton.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                stage.addAction(fadeToGameAction(GameMode.ULTRA));
+            }
+        });
+
+        // 40 Lines Button
+        TextButton fortyLinesButton = new TextButton("40 Lines", assets.skin);
+        fortyLinesButton.setBounds(64, 144, 224, 40);
+        fortyLinesButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
                 stage.addAction(fadeToGameAction(GameMode.FORTYLINES));
             }
         });
-        stage.addActor(start);
+
+        stage.addActor(marathonButton);
+        stage.addActor(ultraButton);
+        stage.addActor(fortyLinesButton);
 
         // Done adding actors
 
         // Fade in the Menu on start
-        stage.addAction(fadeToMenu());
+        mmActor.addAction(fadeToMenu());
 
         stage.setDebugAll(false);
     }
@@ -147,9 +172,9 @@ public class MainMenuScreen implements Screen {
      */
     public SequenceAction fadeToMenu() {
         return sequence(
-                alpha(0),
-                alpha(1f, .8f),
-                parallel(alpha(1f), run(new Runnable() {
+                alpha(1),
+                alpha(0f, .8f),
+                parallel(alpha(0f), run(new Runnable() {
                     @Override
                     public void run() {
                         Gdx.input.setInputProcessor(stage);

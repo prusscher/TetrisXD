@@ -1,6 +1,7 @@
 package com.bepis.tetris.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -76,15 +77,15 @@ public class GameScreen implements Screen {
         boolean drawBoard = true;
         if(drawBoard) {
             // 0
-            stage.addActor(new BackgroundActor(assets, GameMode.FORTYLINES));
+            stage.addActor(new BackgroundActor(assets, mode));
 
             // 1
-            stage.addActor(new TitleActor(assets, GameMode.FORTYLINES));
+            stage.addActor(new TitleActor(assets, mode));
 
             // 2
             stage.addActor(new NextPieceTileActor(assets));
-            stage.addActor(new StatsActor(assets, GameMode.FORTYLINES));
-            stage.addActor(new BoardActor(assets, GameMode.FORTYLINES));
+            stage.addActor(new StatsActor(assets, mode));
+            stage.addActor(new BoardActor(assets, mode));
 
             // 3
             //stage.addActore(new PieceActor());
@@ -146,8 +147,12 @@ public class GameScreen implements Screen {
         Gdx.gl.glClearColor(.1f, .1f, .1f, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        stage.act();
+        stage.act(delta);
         stage.draw();
+
+        if(Gdx.input.isCatchBackKey() || Gdx.input.isKeyPressed(Input.Keys.BACKSPACE) && !Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
+            game.setScreen(new MainMenuScreen(game));
+        }
     }
 
     @Override

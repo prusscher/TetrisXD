@@ -1,9 +1,12 @@
 package com.bepis.tetris;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 /**
  * Created by UPS on 4/17/2017.
@@ -15,6 +18,9 @@ public class Assets {
     // Game Tiles
     public TextureRegion iTile, tTile, zTile, sTile, lTile, jTile, oTile;
     public Texture tiles;
+    public Skin skin;
+    public BitmapFont font;
+    public BitmapFont fontMed;
 
     // TITLE OBJECT ASSETS
     public TextureRegion titleBackground;
@@ -46,10 +52,14 @@ public class Assets {
         Texture temp = null;    // Temporary texture for reading and storing
 
         shape = new ShapeRenderer();
-
         tiles = new Texture(Gdx.files.internal("tiles.png"));
-
         testImage = new Texture(Gdx.files.internal("testScreen.png"));
+
+        // Fonts b o i
+        font = new BitmapFont(Gdx.files.internal("fonts/tetris.fnt"));
+        fontMed = new BitmapFont(Gdx.files.internal("fonts/tetrisMed.fnt"));
+
+        skin = new Skin(Gdx.files.internal("uiskin.json"));
 
         final int MUL = 3;
 
@@ -64,12 +74,12 @@ public class Assets {
 
         // TitleActor Stuff
         temp = new Texture(Gdx.files.internal("titles.png"));
-        titleBackground = new TextureRegion(temp, 0, 72, 360, 24); // Lel mayo
+        titleBackground = new TextureRegion(temp, 0, 24, 120, 8); // Lel mayo
 
         titles = new TextureRegion[3];
-        titles[0] = new TextureRegion(temp, 0, 48, 168, 24);   // Marathon
-        titles[1] = new TextureRegion(temp, 0, 24, 168, 24);   // Ultra
-        titles[2] = new TextureRegion(temp, 0, 0, 168, 24);   // 40 Lines
+        titles[0] = new TextureRegion(temp, 0, 0, 56, 8);   // Marathon
+        titles[1] = new TextureRegion(temp, 0, 8, 56, 8);   // Ultra
+        titles[2] = new TextureRegion(temp, 0, 16, 56, 8);   // 40 Lines
 
         // BackgroundActor stuff
         temp = new Texture(Gdx.files.internal("marathonBG.png"));

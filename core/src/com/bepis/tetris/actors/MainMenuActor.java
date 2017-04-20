@@ -20,6 +20,7 @@ public class MainMenuActor extends Actor {
     private TextureRegion overlay;
     private TextureRegion title;
     private TextureRegion tab;
+    private TextureRegion fade;
 
     public MainMenuActor(Assets assets) {
         statetime = 0;
@@ -29,10 +30,9 @@ public class MainMenuActor extends Actor {
         back.setPlayMode(Animation.PlayMode.LOOP);
 
         overlay = assets.overlay;
-
         title = assets.mainMenuTitle;
-
         tab = assets.mainMenuTab;
+        fade = assets.fadeScreen;
 
         setX(0);
         setY(0);
@@ -50,9 +50,7 @@ public class MainMenuActor extends Actor {
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
 
-//        batch.setColor(1, 1, 1, parentAlpha);
-
-        batch.setColor(getColor());
+        batch.setColor(1, 1, 1, parentAlpha);
 
         // draw animated background
         for(int y = 0; y < 27; y++)
@@ -67,6 +65,8 @@ public class MainMenuActor extends Actor {
 
         // Draw box for buttons
         batch.draw(tab, 48, 36,  256, 412);
+
+        //batch.draw(fade, 0, 0, 360, 640);
 
 //        batch.draw();
     }

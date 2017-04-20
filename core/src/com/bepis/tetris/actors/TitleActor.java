@@ -53,7 +53,7 @@ public class TitleActor extends Actor {
 
         batch.setColor(Color.WHITE);
 
-        batch.draw(background, getX(), getY());
-        batch.draw(titles[mode], getX()+16, getY());
+        batch.draw(background, getX(), getY(), 360, 24);
+        batch.draw(titles[mode], getX()+16, getY(), 168, 24);
     }
 }
