@@ -150,7 +150,9 @@ public class GameScreen implements Screen {
         stage.act(delta);
         stage.draw();
 
-        if(Gdx.input.isCatchBackKey() || Gdx.input.isKeyPressed(Input.Keys.BACKSPACE) && !Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
+        Gdx.input.setCatchBackKey(true);
+
+        if(Gdx.input.isKeyPressed(Input.Keys.BACK) || Gdx.input.isKeyPressed(Input.Keys.BACKSPACE) && !Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
             game.setScreen(new MainMenuScreen(game));
         }
     }

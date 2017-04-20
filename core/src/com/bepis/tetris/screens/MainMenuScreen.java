@@ -12,10 +12,13 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
@@ -66,9 +69,11 @@ public class MainMenuScreen implements Screen {
         MainMenuActor mmActor = new MainMenuActor(assets);
         stage.addActor(mmActor);
 
+        TextButton.TextButtonStyle t = new TextButton.TextButtonStyle(null, null, null, assets.fontMed);
+
         // Marathon Button
-        TextButton marathonButton = new TextButton("MARATHON", assets.skin);
-        marathonButton.setBounds(64, 256, 224, 40);
+        ImageButton marathonButton = new ImageButton(new TextureRegionDrawable(assets.marathonButton[1]), new TextureRegionDrawable(assets.marathonButton[0]));
+        marathonButton.setPosition(64, 256);
         marathonButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -77,8 +82,8 @@ public class MainMenuScreen implements Screen {
         });
 
         // Ultra Button
-        TextButton ultraButton = new TextButton("ULTRA", assets.skin);
-        ultraButton.setBounds(64, 200, 224, 40);
+        ImageButton ultraButton = new ImageButton(new TextureRegionDrawable(assets.ultraButton[1]), new TextureRegionDrawable(assets.ultraButton[0]));
+        ultraButton.setPosition(64, 200);
         ultraButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -87,8 +92,8 @@ public class MainMenuScreen implements Screen {
         });
 
         // 40 Lines Button
-        TextButton fortyLinesButton = new TextButton("40 Lines", assets.skin);
-        fortyLinesButton.setBounds(64, 144, 224, 40);
+        ImageButton fortyLinesButton = new ImageButton(new TextureRegionDrawable(assets.fortyLinesButton[1]), new TextureRegionDrawable(assets.fortyLinesButton[0]));
+        fortyLinesButton.setPosition(64, 144);
         fortyLinesButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {

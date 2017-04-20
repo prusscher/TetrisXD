@@ -1,10 +1,7 @@
 package com.bepis.tetris.actors;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -16,7 +13,7 @@ import com.bepis.tetris.Assets;
  */
 
 public class StatsActor extends Actor {
-    
+
     private TextureRegion tab;
 
     private Label label1, label2, label3;

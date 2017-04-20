@@ -43,6 +43,10 @@ public class Assets {
     public TextureRegion overlay;
     public TextureRegion mainMenuTitle;
     public TextureRegion mainMenuTab;
+    public TextureRegion[] marathonButton;
+    public TextureRegion[] ultraButton;
+    public TextureRegion[] fortyLinesButton;
+
     public TextureRegion fadeScreen;
 
     // Dev stuff/test stuff
@@ -59,7 +63,7 @@ public class Assets {
         font = new BitmapFont(Gdx.files.internal("fonts/tetris.fnt"));
         fontMed = new BitmapFont(Gdx.files.internal("fonts/tetrisMed.fnt"));
 
-        skin = new Skin(Gdx.files.internal("uiskin.json"));
+//        skin = new Skin(Gdx.files.internal("uiskin.json"));
 
         final int MUL = 3;
 
@@ -110,6 +114,18 @@ public class Assets {
         overlay = new TextureRegion(new Texture(Gdx.files.internal("mainMenuTopBG.png")));
         mainMenuTitle = new TextureRegion(new Texture(Gdx.files.internal("title.png")));
         mainMenuTab = new TextureRegion(new Texture(Gdx.files.internal("buttonTab.png")));
+
+        temp = new Texture(Gdx.files.internal("mainMenuButtons.png"));
+        marathonButton = new TextureRegion[2];
+        marathonButton[0] = new TextureRegion(temp, 0, 0, 216, 48);
+        marathonButton[1] = new TextureRegion(temp, 216, 0, 216, 48);
+        ultraButton = new TextureRegion[2];
+        ultraButton[0] = new TextureRegion(temp, 0, 48, 216, 48);
+        ultraButton[1] = new TextureRegion(temp, 216, 48, 216, 48);
+        fortyLinesButton = new TextureRegion[2];
+        fortyLinesButton[0] = new TextureRegion(temp, 0, 96, 216, 48);
+        fortyLinesButton[1] = new TextureRegion(temp, 216, 96, 216, 48);
+
         fadeScreen = new TextureRegion(new Texture(Gdx.files.internal("fadeScreen.png")));
 
     }
