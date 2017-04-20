@@ -13,7 +13,9 @@
     <bookmark url="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/TitleActor.java" line="55" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb9ffe3-8bca-45b3-a551-c86a2e90bad2" name="Default" comment="" />
+    <list default="true" id="bbb9ffe3-8bca-45b3-a551-c86a2e90bad2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="TetrisXD.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="C:\Users\Parker\Documents\GitHub\TetrisXD\.idea\shelf/" />
@@ -2907,7 +2909,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
