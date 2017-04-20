@@ -33,9 +33,14 @@ public class GameScreen implements Screen {
 
     private Stage stage;
 
+    private BoardActor board;
+    private StatsActor stats;
+    private NextPieceTileActor nextPiece;
+
     private Assets assets;
 
     private int mode;
+    private int level, high;
 
     private float dropTimer = 1;
 
@@ -48,6 +53,21 @@ public class GameScreen implements Screen {
     private final int GRID_HEIGHT = 18;
 
     private GameState state;
+
+    public GameScreen(TetrisXD game, int mode, int level) {
+        this(game, mode);
+        this.level = level;
+
+        stats.setLevel(this.level);
+
+    }
+
+    public GameScreen(TetrisXD game, int mode, int level, int high) {
+        this(game, mode, level);
+        this.high = high;
+
+        //board.setHigh(this.high);
+    }
 
     public GameScreen(TetrisXD game, int mode) {
         this.game = game;
@@ -62,6 +82,15 @@ public class GameScreen implements Screen {
         grid = new boolean[GRID_WIDTH][GRID_HEIGHT];
 
         state = new PieceState();
+
+        level = 0;
+        high = 0;
+
+        nextPiece = new NextPieceTileActor(assets);
+        board = new BoardActor(assets, mode);
+        stats = new StatsActor(assets, mode);
+
+        stats.setLevel(level);
 
         //        Image testImage = new Image(assets.testImage);
 //        testImage.setBounds(0, 0, 360, 640);
@@ -83,9 +112,9 @@ public class GameScreen implements Screen {
             stage.addActor(new TitleActor(assets, mode));
 
             // 2
-            stage.addActor(new NextPieceTileActor(assets));
-            stage.addActor(new StatsActor(assets, mode));
-            stage.addActor(new BoardActor(assets, mode));
+            stage.addActor(nextPiece);
+            stage.addActor(stats);
+            stage.addActor(board);
 
             // 3
             //stage.addActore(new PieceActor());

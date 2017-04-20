@@ -156,17 +156,17 @@ public class StatsActor extends Actor {
     public int getLevel() { return level; }
     public int getTimeSec() { return 60*min + sec; }
 
-    public void setLines(int lines) { this.lines = lines; }
-    public void addLines()          { this.lines++; }
-    public void addLines(int lines) { this.lines += lines; }
+    public void setLines(int lines) { this.lines = lines; updateValues(); }
+    public void addLines()          { this.lines++; updateValues(); }
+    public void addLines(int lines) { this.lines += lines; updateValues(); }
 
-    public void setScore(int score) { this.score = score; }
-    public void addScore()          { this.score++; }
-    public void addScore(int score) { this.score += score; }
+    public void setScore(int score) { this.score = score; updateValues(); }
+    public void addScore()          { this.score++; updateValues(); }
+    public void addScore(int score) { this.score += score; updateValues(); }
 
-    public void setLevel(int level) { this.level = level; }
+    public void setLevel(int level) { this.level = level; updateValues(); }
 
-    public void setTime(int min, int sec) { this.min = min; this.sec = (sec > 60) ? sec : 0; }
+    public void setTime(int min, int sec) { this.min = min; this.sec = (sec > 60) ? sec : 0; updateValues();}
 
     public boolean outOfTime() { return (min == 0 && sec == 0) ? true : false; }
 

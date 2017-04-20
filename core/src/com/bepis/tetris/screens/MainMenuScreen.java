@@ -2,22 +2,22 @@ package com.bepis.tetris.screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
+import com.badlogic.gdx.scenes.scene2d.ui.ButtonGroup;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.utils.BaseDrawable;
+import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 
@@ -26,15 +26,9 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 import com.bepis.tetris.Assets;
 import com.bepis.tetris.GameMode;
 import com.bepis.tetris.TetrisXD;
-import com.bepis.tetris.actors.BackgroundActor;
-import com.bepis.tetris.actors.BoardActor;
 import com.bepis.tetris.actors.MainMenuActor;
-import com.bepis.tetris.actors.NextPieceTileActor;
-import com.bepis.tetris.actors.StatsActor;
-import com.bepis.tetris.actors.TitleActor;
+import com.bepis.tetris.actors.SelectorActor;
 import com.kotcrab.vis.ui.VisUI;
-import com.kotcrab.vis.ui.widget.VisTable;
-import com.kotcrab.vis.ui.widget.VisTextButton;
 
 /**
  * Created by Parker on 4/14/2017.
@@ -48,7 +42,15 @@ public class MainMenuScreen implements Screen {
 
     private float timer = 1;
 
-    private Image piece;
+    private int mode;
+
+    private SelectorActor select;
+    private ButtonGroup<ImageButton> group;
+
+    private ImageButton startGameBig;
+    private ImageButton startGameSmall;
+    private boolean udTouched;
+    private boolean lrTouched;
 
     ShapeRenderer shape;
 
@@ -75,45 +77,98 @@ public class MainMenuScreen implements Screen {
         TextButton.TextButtonStyle t = new TextButton.TextButtonStyle(null, null, null, assets.fontMed);
 
         // Marathon Button
-        ImageButton marathonButton = new ImageButton(new TextureRegionDrawable(assets.marathonButton[1]), new TextureRegionDrawable(assets.marathonButton[0]));
+        final ImageButton marathonButton = new ImageButton(new TextureRegionDrawable(assets.marathonButton[1]), new TextureRegionDrawable(assets.marathonButton[0]), new TextureRegionDrawable(assets.marathonButton[0]));
         marathonButton.setPosition(64, 380); //256
-        marathonButton.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                stage.addAction(fadeToGameAction(GameMode.MARATHON));
-            }
-        });
 
         // Ultra Button
-        ImageButton ultraButton = new ImageButton(new TextureRegionDrawable(assets.ultraButton[1]), new TextureRegionDrawable(assets.ultraButton[0]));
+        final ImageButton ultraButton = new ImageButton(new TextureRegionDrawable(assets.ultraButton[1]), new TextureRegionDrawable(assets.ultraButton[0]), new TextureRegionDrawable(assets.ultraButton[0]));
         ultraButton.setPosition(64, 324); //200
-        ultraButton.addListener(new ChangeListener() {
-            @Override
-            public void changed(ChangeEvent event, Actor actor) {
-                stage.addAction(fadeToGameAction(GameMode.ULTRA));
-            }
-        });
 
         // 40 Lines Button
-        ImageButton fortyLinesButton = new ImageButton(new TextureRegionDrawable(assets.fortyLinesButton[1]), new TextureRegionDrawable(assets.fortyLinesButton[0]));
+        final ImageButton fortyLinesButton = new ImageButton(new TextureRegionDrawable(assets.fortyLinesButton[1]), new TextureRegionDrawable(assets.fortyLinesButton[0]),new TextureRegionDrawable(assets.fortyLinesButton[0]));
         fortyLinesButton.setPosition(64, 268); //144
-        fortyLinesButton.addListener(new ChangeListener() {
+
+        // Create the start game buttons
+        startGameBig = new ImageButton(new TextureRegionDrawable(assets.startButton[1]), new TextureRegionDrawable(assets.startButton[0]));
+        startGameSmall = new ImageButton(new TextureRegionDrawable(assets.startButton[3]), new TextureRegionDrawable(assets.startButton[2]));
+        startGameBig.setPosition(64, 72);
+        startGameSmall.setPosition(64, 72);
+
+        // Listener to start the game with selected options.
+        ChangeListener start = new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                stage.addAction(fadeToGameAction(GameMode.FORTYLINES));
+                if(mode == GameMode.MARATHON)
+                    game.setScreen(new GameScreen(game, mode, select.getLevel()));
+                if(mode == GameMode.ULTRA)
+                    game.setScreen(new GameScreen(game, mode, select.getLevel()));
+                if(mode == GameMode.FORTYLINES)
+                    game.setScreen(new GameScreen(game, mode, select.getLevel(), select.getHigh()));
             }
-        });
+        };
 
+        // Add the listener to both start buttons and set them to be invisible on start
+        startGameBig.addListener(start);
+        startGameSmall.addListener(start);
+        startGameBig.setVisible(false);
+        startGameSmall.setVisible(false);
+
+        stage.addActor(startGameBig);
+        stage.addActor(startGameSmall);
+
+        // Button Listeners. RADIO BUTTONS BOI
+        group = new ButtonGroup<ImageButton>(marathonButton, ultraButton, fortyLinesButton);
+        group.setMaxCheckCount(1);
+        group.setMinCheckCount(0);
+        group.setUncheckLast(true);
+        mode = -1;
+
+        // Add the buttons to the stage
         stage.addActor(marathonButton);
         stage.addActor(ultraButton);
         stage.addActor(fortyLinesButton);
 
+        // Create the select actor
+        select = new SelectorActor(assets);
+        stage.addActor(select);
+
         // Done adding actors
+        stage.addListener(new ActorGestureListener() {
+            @Override
+            public void touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                super.touchDown(event, x, y, pointer, button);
+
+                if(rectTouched(select.getLR(), x, y)) {
+                    lrTouched = true;
+                }
+
+                if(rectTouched(select.getUD(), x, y)) {
+                    udTouched = true;
+                }
+            }
+
+            @Override
+            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+                super.touchUp(event, x, y, pointer, button);
+                lrTouched = false;
+                udTouched = false;
+            }
+
+            @Override
+            public void pan(InputEvent event, float x, float y, float deltaX, float deltaY) {
+                super.pan(event, x, y, deltaX, deltaY);
+                if(lrTouched){
+                    select.setLevel( (int)((x-58)/26) );
+                } else if (udTouched) {
+                    select.setHigh( (int)((y-61)/12) );
+                }
+            }
+        });
 
         // Fade in the Menu on start
         mmActor.addAction(fadeToMenu());
 
-        stage.setDebugAll(false);
+//        stage.setDebugAll(true);
     }
 
     @Override
@@ -127,6 +182,47 @@ public class MainMenuScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stage.act();
+
+        // Set the mode so the correct selection menu is selected
+        if(group.getCheckedIndex() != mode) {
+            mode = group.getCheckedIndex();
+            select.setMode(mode);
+
+            // Set the correct start button to be the front
+            if(mode == 2) {
+                startGameBig.setVisible(false);
+                startGameSmall.setVisible(true);
+                startGameSmall.toFront();
+            } else if(mode == 0 || mode == 1) {
+                startGameBig.setVisible(true);
+                startGameSmall.setVisible(false);
+                startGameBig.toFront();
+            } else {
+                startGameBig.setVisible(false);
+                startGameSmall.setVisible(false);
+            }
+
+        }
+
+
+        if(mode != -1) {
+            if (Gdx.input.isKeyPressed(Input.Keys.LEFT) && Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
+                select.setLevel(select.getLevel() - 1);
+            }
+            if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) && Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
+                select.setLevel(select.getLevel() + 1);
+            }
+
+            if(mode == 2) {
+                if (Gdx.input.isKeyPressed(Input.Keys.DOWN) && Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
+                    select.setHigh(select.getHigh() - 1);
+                }
+                if (Gdx.input.isKeyPressed(Input.Keys.UP) && Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
+                    select.setHigh(select.getHigh() + 1);
+                }
+            }
+        }
+
         stage.draw();
     }
 
@@ -189,5 +285,12 @@ public class MainMenuScreen implements Screen {
                     }
                 }))
         );
+    }
+
+    private boolean rectTouched(Rectangle rect, float x, float y) {
+        if (rect.contains(x, y))
+            return true;
+        else
+            return false;
     }
 }

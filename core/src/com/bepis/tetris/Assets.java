@@ -46,6 +46,10 @@ public class Assets {
     public TextureRegion[] marathonButton;
     public TextureRegion[] ultraButton;
     public TextureRegion[] fortyLinesButton;
+    public TextureRegion[] startButton;
+    public TextureRegion[] selectorMenus;
+    public TextureRegion[] lrSelector;
+    public TextureRegion[] udSelector;
 
     public TextureRegion fadeScreen;
 
@@ -117,14 +121,38 @@ public class Assets {
 
         temp = new Texture(Gdx.files.internal("mainMenuButtons.png"));
         marathonButton = new TextureRegion[2];
-        marathonButton[0] = new TextureRegion(temp, 0, 0, 216, 48);
-        marathonButton[1] = new TextureRegion(temp, 216, 0, 216, 48);
+        marathonButton[0] = new TextureRegion(temp, 0, 0, 219, 51);
+        marathonButton[1] = new TextureRegion(temp, 219, 0, 219, 51);
         ultraButton = new TextureRegion[2];
-        ultraButton[0] = new TextureRegion(temp, 0, 48, 216, 48);
-        ultraButton[1] = new TextureRegion(temp, 216, 48, 216, 48);
+        ultraButton[0] = new TextureRegion(temp, 0, 51, 219, 51);
+        ultraButton[1] = new TextureRegion(temp, 219, 51, 219, 51);
         fortyLinesButton = new TextureRegion[2];
-        fortyLinesButton[0] = new TextureRegion(temp, 0, 96, 216, 48);
-        fortyLinesButton[1] = new TextureRegion(temp, 216, 96, 216, 48);
+        fortyLinesButton[0] = new TextureRegion(temp, 0, 102, 219, 51);
+        fortyLinesButton[1] = new TextureRegion(temp, 219, 102, 219, 51);
+        temp = new Texture(Gdx.files.internal("startButton.png"));
+        startButton = new TextureRegion[4];
+        startButton[0] = new TextureRegion(temp, 0, 0, 216, 51);
+        startButton[1] = new TextureRegion(temp, 216, 0, 216, 51);
+        startButton[2] = new TextureRegion(temp, 0, 51, 159, 51);
+        startButton[3] = new TextureRegion(temp, 216, 51, 159, 51);
+
+        // Set selector menus
+        selectorMenus = new TextureRegion[3];
+        selectorMenus[0] = new TextureRegion(new Texture(Gdx.files.internal("marathonSelector.png")));
+        selectorMenus[1] = new TextureRegion(new Texture(Gdx.files.internal("marathonSelector.png")));
+        selectorMenus[2] = new TextureRegion(new Texture(Gdx.files.internal("fortyLinesSelector.png")));
+
+        // Set little animated selector
+        temp = new Texture(Gdx.files.internal("lrSelector.png"));
+        lrSelector = new TextureRegion[8];
+        for(int j = 0; j < 8; j++)
+            lrSelector[j] = new TextureRegion(temp, 8*j, 0, 8, 8);
+
+        temp = new Texture(Gdx.files.internal("udSelector.png"));
+        udSelector = new TextureRegion[8];
+        for(int j = 0; j < 8; j++)
+            udSelector[j] = new TextureRegion(temp, 8*j, 0, 8, 8);
+
 
         fadeScreen = new TextureRegion(new Texture(Gdx.files.internal("fadeScreen.png")));
 
