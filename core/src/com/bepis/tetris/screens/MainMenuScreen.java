@@ -59,6 +59,9 @@ public class MainMenuScreen implements Screen {
         stage = new Stage(new FitViewport(360, 640, new OrthographicCamera()));
         //Gdx.input.setInputProcessor(stage);
 
+        // No longer catch the back key boi
+        Gdx.input.setCatchBackKey(false);
+
         // Set the assets object to the game's asset object
         assets = game.assets;
 
@@ -73,7 +76,7 @@ public class MainMenuScreen implements Screen {
 
         // Marathon Button
         ImageButton marathonButton = new ImageButton(new TextureRegionDrawable(assets.marathonButton[1]), new TextureRegionDrawable(assets.marathonButton[0]));
-        marathonButton.setPosition(64, 256);
+        marathonButton.setPosition(64, 380); //256
         marathonButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -83,7 +86,7 @@ public class MainMenuScreen implements Screen {
 
         // Ultra Button
         ImageButton ultraButton = new ImageButton(new TextureRegionDrawable(assets.ultraButton[1]), new TextureRegionDrawable(assets.ultraButton[0]));
-        ultraButton.setPosition(64, 200);
+        ultraButton.setPosition(64, 324); //200
         ultraButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -93,7 +96,7 @@ public class MainMenuScreen implements Screen {
 
         // 40 Lines Button
         ImageButton fortyLinesButton = new ImageButton(new TextureRegionDrawable(assets.fortyLinesButton[1]), new TextureRegionDrawable(assets.fortyLinesButton[0]));
-        fortyLinesButton.setPosition(64, 144);
+        fortyLinesButton.setPosition(64, 268); //144
         fortyLinesButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {

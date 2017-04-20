@@ -64,7 +64,7 @@ public class MainMenuActor extends Actor {
         batch.draw(title,36, 448);
 
         // Draw box for buttons
-        batch.draw(tab, 48, 36,  256, 412);
+        batch.draw(tab, 48, 36, 256, 412);
 
         //batch.draw(fade, 0, 0, 360, 640);
 
