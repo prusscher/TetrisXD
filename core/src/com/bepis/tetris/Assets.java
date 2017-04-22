@@ -54,14 +54,14 @@ public class Assets {
     public TextureRegion fadeScreen;
 
     // Dev stuff/test stuff
-    public Texture testImage;
+    public TextureRegion clearTile;
 
     public Assets() {
         Texture temp = null;    // Temporary texture for reading and storing
 
         shape = new ShapeRenderer();
         tiles = new Texture(Gdx.files.internal("tiles.png"));
-        testImage = new Texture(Gdx.files.internal("testScreen.png"));
+//        testImage = new Texture(Gdx.files.internal("testScreen.png"));
 
         // Fonts b o i
         font = new BitmapFont(Gdx.files.internal("fonts/tetris.fnt"));
@@ -155,6 +155,8 @@ public class Assets {
 
 
         fadeScreen = new TextureRegion(new Texture(Gdx.files.internal("fadeScreen.png")));
+
+        clearTile = new TextureRegion(new Texture(Gdx.files.internal("clearTile.png")));
 
     }
 

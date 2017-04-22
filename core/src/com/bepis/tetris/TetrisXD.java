@@ -2,6 +2,7 @@ package com.bepis.tetris;
 
 import com.badlogic.gdx.Game;
 import com.bepis.tetris.screens.MainMenuScreen;
+import com.bepis.tetris.screens.TestScreen;
 
 public class TetrisXD extends Game {
 
@@ -11,6 +12,8 @@ public class TetrisXD extends Game {
 	public void create () {
 		assets = new Assets();
 		this.setScreen(new MainMenuScreen(this));
+
+//		this.setScreen(new TestScreen(assets));
 	}
 
 	@Override
