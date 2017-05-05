@@ -10,10 +10,12 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.bepis.tetris.Assets;
 import com.bepis.tetris.GameMode;
+import com.bepis.tetris.PieceGenerator;
 import com.bepis.tetris.TetrisXD;
 import com.bepis.tetris.actors.BackgroundActor;
 import com.bepis.tetris.actors.BoardActor;
 import com.bepis.tetris.actors.NextPieceTileActor;
+import com.bepis.tetris.actors.PieceActor;
 import com.bepis.tetris.actors.StatsActor;
 import com.bepis.tetris.actors.TitleActor;
 
@@ -22,13 +24,6 @@ import com.bepis.tetris.actors.TitleActor;
  */
 
 public class GameScreen implements Screen {
-
-    // GameState, Specific state of the game (GameOver, Pause, Dropping, Clearing)
-    interface GameState {
-        void draw();
-        void update(float delta);
-    }
-
     private TetrisXD game;
 
     private Stage stage;
@@ -36,23 +31,18 @@ public class GameScreen implements Screen {
     private BoardActor board;
     private StatsActor stats;
     private NextPieceTileActor nextPiece;
+    private PieceActor piece;
 
     private Assets assets;
+    private PieceGenerator pieceGen;
 
     private int mode;
     private int level, high;
 
     private float dropTimer = 1;
-
-    private boolean[][] grid;               // Logical Block Grid
-    private TextureRegion[][] gridTexture;  // Graphic Block Grid
+    private float dropMult = 1;
 
     private final int BLOCK_SIZE = 24;  // Specify the pixel size of each block
-
-    private final int GRID_WIDTH = 10;   // 10x18 grid, faithful to DX
-    private final int GRID_HEIGHT = 18;
-
-    private GameState state;
 
     public GameScreen(TetrisXD game, int mode, int level) {
         this(game, mode);
@@ -74,21 +64,18 @@ public class GameScreen implements Screen {
         this.mode = mode;
 
         assets = game.assets;
+        pieceGen = new PieceGenerator();
 
         stage = new Stage(new FitViewport(360, 640, new OrthographicCamera()));
         Gdx.input.setInputProcessor(stage);
 
-        // Create the grid
-        grid = new boolean[GRID_WIDTH][GRID_HEIGHT];
-
-        state = new PieceState();
-
         level = 0;
         high = 0;
 
-        nextPiece = new NextPieceTileActor(assets);
+        nextPiece = new NextPieceTileActor(assets, pieceGen);
         board = new BoardActor(assets, mode);
         stats = new StatsActor(assets, mode);
+        piece = new PieceActor(assets, pieceGen);
 
         stats.setLevel(level);
 
@@ -117,53 +104,11 @@ public class GameScreen implements Screen {
             stage.addActor(board);
 
             // 3
-            //stage.addActore(new PieceActor());
-        }
-    }
-
-    class PieceState implements GameState {
-
-//        boolean[][] piece =
-
-        @Override
-        public void draw() {
-            // Draw the game
+            stage.addActor(piece);
+            piece.toFront();
         }
 
-        @Override
-        public void update(float delta) {
-            // Check if the player has lost the game
-
-            // Check if the game should be paused
-
-            // increment the drop counter
-
-            // if the drop counter is less than 0, drop the piece
-
-            // handle player input
-
-        }
-
-        private void handleInput() {
-            // handle left piece move
-
-            // handle right piece move
-
-            // handle piece rotation left
-
-            // handle piece rotation right
-
-            // handle down movement
-                // DX didn't have instant drop, should just decrease the drop counter by more, I think
-        }
-
-        private void attachPiece() {
-
-        }
-    }
-
-    boolean[][] getPiece() {
-        return null;
+        stage.setDebugAll(false);
     }
 
     @Override
@@ -184,6 +129,64 @@ public class GameScreen implements Screen {
         if(Gdx.input.isKeyPressed(Input.Keys.BACK) || Gdx.input.isKeyPressed(Input.Keys.BACKSPACE) && !Gdx.input.isKeyJustPressed(Input.Keys.BACKSPACE)) {
             game.setScreen(new MainMenuScreen(game));
         }
+
+        // GAME LOGIC
+        dropTimer -= delta;
+        if(dropTimer < 0) {
+            dropTimer = 1;
+
+            if(piece.canMoveDown(board.getBoard()))
+                piece.moveDown(board.getBoard());
+            else {  // Setting the piece to the board
+                attachPiece();
+                piece.newPiece(nextPiece.next());
+            }
+        }
+
+        if(Gdx.input.isKeyPressed(Input.Keys.SPACE) && Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
+            piece.newPiece(nextPiece.next());
+        }
+
+        if(Gdx.input.isKeyPressed(Input.Keys.DOWN) && Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
+            if(piece.canMoveDown(board.getBoard())) { // if we can drop, drop and reset timer
+                piece.moveDown(board.getBoard());
+                dropTimer = 1;
+            } else {    // Otherwise, speed up drop timer
+                dropTimer -= .25;
+            }
+
+        }
+
+        if(Gdx.input.isKeyPressed(Input.Keys.LEFT) && Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
+            piece.moveLeft(board.getBoard());
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT) && Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
+            piece.moveRight(board.getBoard());
+        }
+
+        if(Gdx.input.isKeyPressed(Input.Keys.COMMA) && Gdx.input.isKeyJustPressed(Input.Keys.COMMA)) {
+            piece.rotateLeft(board.getBoard());
+        }
+        if(Gdx.input.isKeyPressed(Input.Keys.PERIOD) && Gdx.input.isKeyJustPressed(Input.Keys.PERIOD)) {
+            piece.rotateRight(board.getBoard());
+        }
+    }
+
+    private void attachPiece() {
+        boolean[][] l = piece.getLogic();
+        TextureRegion[][] t = piece.getTexture();
+        int size = l.length;
+        int relX = (int) piece.getPieceX();
+        int relY = (int) piece.getPieceY();
+
+        // For each actual tile, set the piece on the board to the tile
+        for (int y = 0; y < size; y++)
+            for (int x = 0; x < size; x++)
+                if (l[x][y])
+                    board.setPiece(relX + x, relY + y, t[x][y]);
+        stats.addScore(board.clearRows());
+
+//      piece.printBoard(board.getBoard());
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.bepis.tetris.Assets;
 import com.bepis.tetris.GameMode;
@@ -14,6 +13,10 @@ import com.bepis.tetris.GameMode;
  */
 
 public class BoardActor extends Actor {
+    public static final int BOARD_START_X = 36+24;
+    public static final int BOARD_START_Y = 24;
+    public static final int BOARD_END_X = BOARD_START_X + GameMode.BOARD_WIDTH * 24;
+    public static final int BOARD_END_Y = BOARD_START_Y + GameMode.BOARD_HEIGHT * 24;
 
     // Frame of the board
     private TextureRegion frame;
@@ -28,6 +31,8 @@ public class BoardActor extends Actor {
     // This is where the actual piece stuff goes
     private boolean[][] board;
     private TextureRegion[][] boardTex;
+
+    private TextureRegion clearTile;
 
     private boolean drawBG = true, drawFrame = true, drawTiles = true;
 
@@ -47,6 +52,8 @@ public class BoardActor extends Actor {
         // Set the border tile texture and background texture
         frame = assets.borderTile;
         bg = assets.boardBackgrounds[0];
+
+        clearTile = assets.clearTile;
 
         // Setup the board
         setupBoard(assets, 0);
@@ -82,6 +89,39 @@ public class BoardActor extends Actor {
         }
     }
 
+    public int clearRows() {
+        int total = 0;
+        for(int y = 0; y < GameMode.BOARD_HEIGHT-1; y++) {
+            boolean rowComplete = true;
+
+            for(int x = 0; x < GameMode.BOARD_WIDTH-1; x++)
+                if(!board[x][y])
+                    rowComplete = false;
+
+            if(rowComplete) {
+                shiftDown(y);
+                total++;
+                y--;
+            }
+        }
+
+        return total;
+    }
+
+    private void shiftDown(int row) {
+        for(int y = row; y < GameMode.BOARD_HEIGHT-2; y++) {
+            for (int x = 0; x < GameMode.BOARD_WIDTH - 1; x++) {
+                board[x][y] = board[x][y+1];
+                boardTex[x][y] = boardTex[x][y+1];
+            }
+        }
+        // Clear top row
+        for (int x = 0; x < GameMode.BOARD_WIDTH - 1; x++) {
+            board[x][17] = false;
+            boardTex[x][17] = clearTile;
+        }
+    }
+
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
@@ -114,4 +154,6 @@ public class BoardActor extends Actor {
         }
 
     }
+
+    public boolean[][] getBoard() { return board; }
 }

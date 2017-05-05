@@ -16,7 +16,8 @@ public class Assets {
     public ShapeRenderer shape;
 
     // Game Tiles
-    public TextureRegion iTile, tTile, zTile, sTile, lTile, jTile, oTile;
+    public TextureRegion[] iTile;
+    public TextureRegion tTile, zTile, sTile, lTile, jTile, oTile;
     public Texture tiles;
     public Skin skin;
     public BitmapFont font;
@@ -61,24 +62,26 @@ public class Assets {
 
         shape = new ShapeRenderer();
         tiles = new Texture(Gdx.files.internal("tiles.png"));
-//        testImage = new Texture(Gdx.files.internal("testScreen.png"));
 
         // Fonts b o i
         font = new BitmapFont(Gdx.files.internal("fonts/tetris.fnt"));
         fontMed = new BitmapFont(Gdx.files.internal("fonts/tetrisMed.fnt"));
 
-//        skin = new Skin(Gdx.files.internal("uiskin.json"));
-
-        final int MUL = 3;
 
         // Set the Piece textures
-        iTile = new TextureRegion(tiles, 16*MUL,    0,      8*MUL,  32*MUL);
-        tTile = new TextureRegion(tiles, 32*MUL,    8*MUL,  24*MUL, 16*MUL);
-        zTile = new TextureRegion(tiles, 64*MUL,    8*MUL,  24*MUL, 16*MUL);
-        sTile = new TextureRegion(tiles, 96*MUL,    8*MUL,  24*MUL, 16*MUL);
-        lTile = new TextureRegion(tiles, 136*MUL,   0,      16*MUL, 24*MUL);
-        jTile = new TextureRegion(tiles, 160*MUL,   0,      16*MUL, 24*MUL);
-        oTile = new TextureRegion(tiles, 192*MUL,   48,     16*MUL, 16*MUL);    // I dont know why this. fuck this dude.
+        temp = new Texture(Gdx.files.internal("tileSheet.png"));
+        iTile = new TextureRegion[4];
+        iTile[0] = new TextureRegion(temp, 0, 0, 24, 24);
+        iTile[1] = new TextureRegion(temp, 24, 0, 24, 24);
+        iTile[2] = new TextureRegion(temp, 48, 0, 24, 24);
+        iTile[3] = new TextureRegion(temp, 72, 0, 24, 24);
+
+        tTile = new TextureRegion(temp, 96, 0, 24, 24);
+        zTile = new TextureRegion(temp, 120, 0, 24, 24);
+        sTile = new TextureRegion(temp, 144, 0, 24, 24);
+        lTile = new TextureRegion(temp, 168, 0, 24, 24);
+        jTile = new TextureRegion(temp, 192, 0, 24, 24);
+        oTile = new TextureRegion(temp, 216, 0, 24, 24);
 
         // TitleActor Stuff
         temp = new Texture(Gdx.files.internal("titles.png"));

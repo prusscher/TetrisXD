@@ -14,32 +14,112 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb9ffe3-8bca-45b3-a551-c86a2e90bad2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/marathonSelector.ase" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/Layout.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/badlogic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/font.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/sprite.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/sprites.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/sprites.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/temp/yes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/testScreen.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_android_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/Piece.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/PieceGenerator.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/tetris.atlas" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/tetris.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/tetris2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/assets/uiskin.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/marathonSelector.ase" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/Layout.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/badlogic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/font.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/sprite.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/sprites.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/sprites.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/temp/yes.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/assets/debug/testScreen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/GameScreen$GameState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/GameScreen$PieceState.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_android_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/assets/tiles.png" afterPath="$PROJECT_DIR$/android/assets/tiles.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/Assets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/GameMode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/TetrisXD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental-verifier/debug/com/bepis/tetris/actors/PieceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-resources/resources-debug.ir.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/dep/dependencies.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/dep/dependencies.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_0.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_0.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_1.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_1.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_2.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_2.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_3.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_3.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_4.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_5.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_5.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_6.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_6.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_7.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_7.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_8.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_8.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_9.apk" afterPath="$PROJECT_DIR$/android/build/intermediates/split-apk/debug/slices/slice_9.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/Assets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/GameMode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/TetrisXD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/extractJars/debug/folders/1/4/core-1.0.jar-1760667907/com/bepis/tetris/actors/PieceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/Assets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/GameMode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/TetrisXD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/bepis/tetris/actors/PieceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/Assets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/GameMode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/bepis/tetris/TetrisXD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/bepis/tetris/actors/PieceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" afterPath="$PROJECT_DIR$/android/build/outputs/apk/android-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/Assets.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/GameMode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/TetrisXD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/android/build/tmp/expandedArchives/core-1.0.jar_wjg5jm5ajt6xlj4cufvjnf21/com/bepis/tetris/actors/PieceActor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/Assets.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/Assets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/GameMode.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/GameMode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/TetrisXD.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/TetrisXD.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/BoardActor.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/BoardActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/NextPieceTileActor.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/NextPieceTileActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/PieceActor.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/actors/PieceActor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/GameScreen.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/GameScreen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/TestScreen.class" afterPath="$PROJECT_DIR$/core/build/classes/main/com/bepis/tetris/screens/TestScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/android.iml" afterPath="$PROJECT_DIR$/android/android.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_3/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_3/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/android/build/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/android/build/intermediates/restart-dex/debug/build-info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/GameMode.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/GameMode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/TetrisXD.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/TetrisXD.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java" afterPath="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="TetrisXD.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +152,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainMenuScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/MainMenuScreen.java">
+      <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2601">
-              <caret line="181" column="49" selection-start-line="180" selection-start-column="7" selection-end-line="181" selection-end-column="49" />
+            <state relative-caret-position="66">
+              <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+              <folding>
+                <element signature="method#resume#0;class#GameScreen#0" expanded="false" />
+                <element signature="method#hide#0;class#GameScreen#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NextPieceTileActor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,21 +177,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardActor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java">
+      <file leaf-file-name="PieceActor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="445">
+              <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Assets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java">
+      <file leaf-file-name="BoardActor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="158" column="88" selection-start-line="158" selection-start-column="88" selection-end-line="158" selection-end-column="88" />
+            <state relative-caret-position="753">
+              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/Piece.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1961,7 +2068,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\Parker\Documents\GitHub\TetrisXD" value="7461378038182" />
+        <entry key="C:\Users\Parker\Documents\GitHub\TetrisXD" value="7461099060104" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2408,7 +2515,6 @@
         <option value="$PROJECT_DIR$/desktop/src/com/bepis/tetris/desktop/DesktopLauncher.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/Piece.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/IPiece.java" />
-        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BackgroundActor.java" />
         <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/TitleActor.java" />
@@ -2417,22 +2523,26 @@
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/MainMenuActor.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/listeners/MainMenuListener.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/SelectorActor.java" />
-        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/StatsActor.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/MainMenuScreen.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/GameMode.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/PieceGenerator.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/TetrisXD.java" />
-        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/Piece.java" />
         <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2459,99 +2569,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisXD" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisXD" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisXD" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisXD" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TetrisXD" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tetris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2586,6 +2604,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2595,7 +2618,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/screenshots" />
     <property name="device.picker.selection" value="ZX1F22Z9WX" />
     <property name="GpuMonitor.paused" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Parker/Documents/GitHub/TetrisXD/core/src/com/bepis/tetris/actors/SelectorActor.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Parker/Documents/GitHub/TetrisXD/core/src/com/bepis/tetris/actors/PieceActor.java" />
     <property name="ScreenshotViewer.SavePath" value="$PROJECT_DIR$/screenshots" />
   </component>
   <component name="RunManager" selected="Application.DesktopLauncher">
@@ -2954,37 +2977,66 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830626" sideWeight="0.4936034" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35392052" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5042644" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24840085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5042644" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1659506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830626" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259861" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5042644" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1659506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -2999,47 +3051,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/scenes/scene2d/ui/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/assets/tiles.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/desktop/src/com/bepis/tetris/desktop/DesktopLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3150,25 +3170,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/assets/fonts/tetris.fnt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/android/assets/fonts/tetris.fnt" />
     <entry file="file://$PROJECT_DIR$/android/assets/titles.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/assets/uiskin.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/android/assets/uiskin.json" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/scenes/scene2d/ui/Skin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -3199,7 +3207,7 @@
         <state relative-caret-position="1075">
           <caret line="66" column="40" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3208,35 +3216,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="168" column="108" selection-start-line="168" selection-start-column="108" selection-end-line="168" selection-end-column="108" />
-          <folding>
-            <element signature="method#StatsActor#0;class#StatsActor#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screenshots/selection1.png" />
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/SelectorActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/SelectorActor.java" />
     <entry file="file://$PROJECT_DIR$/screenshots/mainmenu.png" />
     <entry file="file://$PROJECT_DIR$/screenshots/playarea.png" />
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.5/df0e6a52ed42009b20ab64cc81e57c3ae24d9109/gdx-1.9.5-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
@@ -3275,11 +3262,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/MainMenuScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="181" column="49" selection-start-line="180" selection-start-column="7" selection-end-line="181" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="5764">
+          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3287,27 +3272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/TetrisXD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding>
-            <element signature="method#resume#0;class#GameScreen#0" expanded="false" />
-            <element signature="method#hide#0;class#GameScreen#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3332,10 +3296,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/PieceGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/Assets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="158" column="88" selection-start-line="158" selection-start-column="88" selection-end-line="158" selection-end-column="88" />
+        <state relative-caret-position="362">
+          <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/TestScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/TetrisXD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/NextPieceTileActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3344,9 +3346,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/BoardActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="753">
+          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/screens/GameScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
+          <folding>
+            <element signature="method#resume#0;class#GameScreen#0" expanded="false" />
+            <element signature="method#hide#0;class#GameScreen#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/bepis/tetris/actors/PieceActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
